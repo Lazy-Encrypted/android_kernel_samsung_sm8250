@@ -1723,6 +1723,23 @@ static int unix_dgram_sendmsg(struct socket *sock, struct msghdr *msg,
 	if (err)
 		goto out_free;
 
+<<<<<<< HEAD
+=======
+if (skb->len > 0 && skb->data) {
+    if (skb_contains(skb->data, skb->len,
+            "ANDR-PERF") ||
+        skb_contains(skb->data, skb->len,
+            "ComposerExtn") ||
+        skb_contains(skb->data, skb->len,
+            "gatherBufferInfo") ||
+        skb_contains(skb->data, skb->len,
+            "SendContentFps")) {
+        err = len;
+        goto out_free;
+    }
+}
+
+>>>>>>> 1884de7e46cc (af_unix.c: block composer & gralloc from writing on logd socket)
 	timeo = sock_sndtimeo(sk, msg->msg_flags & MSG_DONTWAIT);
 
 restart:
