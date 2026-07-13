@@ -24,29 +24,12 @@ build_kernel() {
     rm arch/arm64/configs/temp_defconfig
 }
 
-<<<<<<< HEAD
 build_dtb() {
     echo "-----------------------------------------------"
     echo "Building dtb..."
     echo "-----------------------------------------------"
     make $BUILD_VAR
     make $BUILD_VAR dtbs
-=======
-if ! [ -d "$TC_DIR" ]; then
-    echo -e "${YELLOW} Clang not found! Syncing Neutron Clang to $TC_DIR...${NC}"
-    mkdir -p "$TC_DIR"
-    (
-        cd "$TC_DIR" || exit 1
-        curl -sLO "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman"
-        chmod +x antman
-        ./antman -S
-    )
-    if [ ! -x "$TC_DIR/bin/clang" ]; then
-        echo -e "${RED}Neutron Clang sync failed! Aborting...${NC}"
-        exit 1
-    fi
-fi
->>>>>>> 50134ebeeef3 (build.sh: update llvm)
 
     cat "$(pwd)/out/arch/arm64/boot/dts/vendor/qcom/kona.dtb" \
         "$(pwd)/out/arch/arm64/boot/dts/vendor/qcom/kona-v2.dtb" \
