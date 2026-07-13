@@ -108,7 +108,7 @@
 				compatible = "resource";
 				resource@1 {
 					resource,label = "CPU";
-					resource,value = <0 0>;
+					resource,value = <1171200 1075200>;
 				};
 
 				resource@2 {
@@ -141,12 +141,12 @@
 				compatible = "resource";
 				resource@1 {
 					resource,label = "CPU";
-					resource,value = <0 0>;
+					resource,value = <1171200 1075200>;
 				};
 
 				resource@2 {
 					resource,label = "DDR";
-					resource,value = <0 0>;
+					resource,value = <1017 1017>;
 				};
 
 				resource@3 {
