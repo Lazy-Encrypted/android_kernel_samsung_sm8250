@@ -22,7 +22,6 @@ obj-$(CONFIG_INPUT_MOUSEDEV)	+= mousedev.o
 obj-$(CONFIG_INPUT_JOYDEV)	+= joydev.o
 obj-$(CONFIG_INPUT_EVDEV)	+= evdev.o input_booster.o
 obj-$(CONFIG_ARCH_QCOM)	+= input_booster_qc.o
-obj-$(CONFIG_ARCH_QCOM)	+= input_booster_qc.o
 obj-$(CONFIG_ARCH_)	+= input_booster_api_qc.o
 obj-$(CONFIG_INPUT_EVBUG)	+= evbug.o
 
